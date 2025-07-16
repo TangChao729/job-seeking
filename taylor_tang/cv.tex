@@ -1,13 +1,13 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for Cover Letter
+% Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Authors:
+% Author:
 % Claud D. Park <posquit0.bj@gmail.com>
-% Lars Richter <mail@ayeks.de>
+% http://www.posquit0.com
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -50,10 +50,10 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{./ghibli_studio_2.png}
+% \photo{./images/profile.png}
 \name{Taylor}{Tang}
 \position{Machine Learning Engineer{\enskip\cdotp\enskip}Software Architect}
-\address{Palmwoods Cres, Brisbane, QLD 4113, Australia}
+\address{Brisbane, QLD, Australia}
 
 \mobile{(+61) 422-110-216}
 \email{tay.tang@outlook.com}
@@ -66,7 +66,7 @@
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
-% \medium{madium-id}
+% \medium{medium-id}
 % \kaggle{kaggle-id}
 % \hackerrank{hackerrank-id}
 % \telegram{telegram-username}
@@ -75,27 +75,7 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
-\quote{``Better to run than curse the road."}
-
-
-%-------------------------------------------------------------------------------
-%	LETTER INFORMATION
-%	All of the below lines must be filled out
-%-------------------------------------------------------------------------------
-% The company being applied to
-\recipient
-  {Company Recruitment Team}
-  {Cyberhawk\\Edinburgh EH28 8AA\\United Kingdom}
-% The date on the letter, default is the date of compilation
-\letterdate{\today}
-% The title of the letter
-\lettertitle{Job Application for Machine Learning Engineer - Computer Vision}
-% How the letter is opened
-\letteropening{Dear Recruitment Team,}
-% How the letter is closed
-\letterclosing{Sincerely,}
-% Any enclosures with the letter
-% \letterenclosure[Attached]{Curriculum Vitae}
+\quote{``Better to run than curse the road"}
 
 
 %-------------------------------------------------------------------------------
@@ -103,37 +83,31 @@
 
 % Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Taylor Tang~~~·~~~Cover Letter}
-  {}
-
-% Print the title with above letter information
-\makelettertitle
-
-%-------------------------------------------------------------------------------
-%	LETTER CONTENT
-%-------------------------------------------------------------------------------
-\begin{cvletter}
-
-\lettersection{About Me}
-I am a Machine Learning Engineer with a Master’s degree in Information Technology from the University of Melbourne and a deep interest in computer vision for real-world applications. I’ve worked across drone vision projects, road safety detection, and environmental object tracking. I’m someone who values clear goals, careful planning, and follows through on commitments—I like to keep communication straightforward and results-focused.
-
-\lettersection{Why Cyberhawk?}
-Cyberhawk’s work speaks directly to both my interests and strengths. The mission of improving industrial safety through drone-based computer vision solutions is not only exciting but also aligns with the kind of problems I enjoy solving. I see a strong overlap between your use of drone-captured imagery for infrastructure inspection and the projects I’ve delivered using aerial and ground-level visual data. I also appreciate your open, no-drama culture and plainspoken communication—it’s the kind of environment where I believe I’d do my best work.
-
-\lettersection{Why Me?}
-Most recently at KJR, I contributed to Feral AI, a system that uses drone imagery to detect objects in the environment. Prior to that, I worked as an ML engineering intern where I developed models to identify potholes and cracks from road images. I am experienced with PyTorch, OpenCV, and custom pipelines for image dataset preparation and defect detection. I’ve deployed models in real-world systems, handled noisy drone footage, and iteratively improved detection performance through data analysis and model tuning. I’m confident my skills in computer vision, paired with a practical, hands-on mindset, would make me a strong contributor to your team from day one.
-
-\end{cvletter}
+  {Taylor Tang~~~·~~~Curriculum Vitae}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
-% Print the signature and enclosures with above letter information
-\makeletterclosing
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{sections/education.tex}
+\input{sections/experience.tex}
+\input{sections/project.tex}
+\input{sections/honors.tex}
+\input{sections/certificates.tex}
+% \input{sections/skills.tex}
+% \input{sections/presentation.tex}
+% \input{sections/writing.tex}
+% \input{sections/committees.tex}
+% \input{sections/extracurricular.tex}
 
-\end{document}
+
+%-------------------------------------------------------------------------------
+\end{document} 
