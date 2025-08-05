@@ -1,0 +1,28 @@
+---
+description: When asked to rewrite cover letter
+alwaysApply: true
+
+rules:
+  - description: "Follow these steps when rewriting a cover letter:"
+    alwaysApply: true
+    steps: |
+      0. Read user provided job description for the target role requirements
+      1. Create a new branch with name: company-jobtitle (lowercase, hyphens for spaces)
+      2. Read the ./taylor_tang/resume.tex file first to understand the candidate's background
+      3. Rewrite ./taylor_tang/coverletter.tex to:
+         - Match relevant experience to job requirements
+         - Use keywords from the job description
+         - Maintain professional tone consistent with existing style
+         - Keep the same LaTeX structure and formatting
+      4. Run 'make coverletter' after changes to compile the PDF
+
+  - description: "Important reminders for cover letter rewriting:"
+    alwaysApply: true
+    notes: |
+      - Branch naming: company-jobtitle (lowercase, hyphens for spaces)
+      - Always work from main branch as base
+      - Job description should be in user provided job description
+      - Preserve existing LaTeX formatting and structure
+      - Focus on matching candidate's experience to job requirements
+      - Use professional tone throughout
+---
